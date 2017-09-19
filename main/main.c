@@ -36,24 +36,26 @@ void ft_memtest(void)
 
 int main()
 {
-	char str[] = "   Bonjour ttout le monde  ";
+	char str[] = "                                       ";
 	char str2[20] = "les gens";
-	char dest[20];
+	char *dest;
 	char **test;
 	char *itoa;
 	int cmp;
 	int i;
 
 	i = 0;
-	ft_strcat(dest, str2);
-	printf("STRCAT = %s\n", dest);
+	//dest = ft_strndup(str2, 9);
+	//printf("STRNDUP = %s\n", dest);
 	ft_memtest();
-	test = ft_strsplit(str, 'o');
-	printf("SPLIT TEST = %s\n", test[4]);
+	test = ft_strsplit(str, ' ');
+	printf("SPLIT TEST = %s\n", test[0]);
 	itoa = ft_itoa(-2147483648);
 	printf("ITOA = %s\n", itoa);
 	ft_putendl(str2);
+	printf("ATOI = %d\n", ft_atoi("473274"));
 	//cmp = isprint('0');
 	free(test);
 	free(itoa);
+	free(dest);
 }

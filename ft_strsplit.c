@@ -74,14 +74,14 @@ static void	ft_attribution(char **dest, char *trimed, char c)
 		}
 		t++;
 	}
-	dest[j][i] = '\0';
+	dest[j][0] = '\0';
 }
 
 char **ft_strsplit(char const *s, char c)
 {
 	char **dest;
 	char *trimed;
-	
+
 	trimed = ft_strtrim_modified(s, c);
 	if (dest = (char**)ft_memalloc(sizeof(*dest) * (ft_nb_words(trimed, c) + 1)))
 	{
