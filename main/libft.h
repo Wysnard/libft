@@ -4,6 +4,7 @@
 #include <unistd.h>
 #include <string.h>
 #include <stdlib.h>
+#include <stdint.h>
 
 typedef struct	s_list
 {
@@ -76,5 +77,16 @@ void ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 
 char *ft_strndup(const char *s, size_t n);
+int	ft_power(int nb, int power);
+char *ft_convert_base(char *nbr, char *base_from, char *base_to);
+void	ft_strrev(char *s);
+char	*ft_utoa(unsigned int nbr, char const *base_chr);
+char	*ft_dtoa(double nbr, size_t	size);
+char	*ft_imtoa_base(intmax_t nbr, char *base_to);
+void	ft_print_bits(unsigned char octet);
+void	ft_putwchar_fd(wchar_t chr, int fd);
+void	ft_putwstr_fd(wchar_t const *str, int fd);
+void	ft_putwchar(wchar_t chr);
+void	ft_putwstr(wchar_t const *str);
 
 #endif

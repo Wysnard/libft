@@ -7,7 +7,7 @@ int ft_atoi(const char *nptr)
 
 	nb = 0;
 	sign = 1;
-	while (*nptr == ' ')
+	while (*nptr == ' ' || *nptr < 32)
 		nptr++;
 	if (*nptr == '-')
 		sign = -1;

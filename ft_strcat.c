@@ -9,10 +9,10 @@ char *ft_strcat(char *dest, const char *src)
 	{
 		while (*cat++)
 			;
-		*cat--;
+		cat--;
 	}
 	while (*cat++ = *src++)
 		;
 	*cat = '\0';
-	return (cat);
+	return (dest);
 }

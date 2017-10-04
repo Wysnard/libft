@@ -1,4 +1,4 @@
-#include "libft.h"
+#include "../libft.h"
 #include <stdio.h>
 #include <ctype.h>
 
@@ -23,7 +23,7 @@ void ft_memtest(void)
 
 	printf("TEST = %s\n", test);
 	printf("STREQU = %d\n", ft_strequ("a", "v"));
-	mem = ft_strsub(test, 2, 3);
+	mem = ft_strsub(test, 2, 5);
 	printf("STRSUB = %s\n", mem);
 	//mem = ft_strmap(test, &ft_toupper);
 	//printf("MAP = %s\n", mem);
@@ -36,26 +36,37 @@ void ft_memtest(void)
 
 int main()
 {
-	char str[] = "                                       ";
+	char str[] = "Salut";
 	char str2[20] = "les gens";
 	char *dest;
 	char **test;
 	char *itoa;
 	int cmp;
 	int i;
+	intmax_t	d = 0;
+	wchar_t w[3] = {'l', 'o', '0'};
 
-	i = 0;
+	i = 1;
+	printf("STRCAT = %s\n", ft_strcat(str, str2));
+	//ft_putnbr(ft_atoim("-1234"));
 	//dest = ft_strndup(str2, 9);
 	//printf("STRNDUP = %s\n", dest);
-	ft_memtest();
+	/*ft_memtest();
 	test = ft_strsplit(str, ' ');
 	printf("SPLIT TEST = %s\n", test[0]);
-	itoa = ft_itoa(-2147483648);
+	itoa = ft_itoa(-23);
 	printf("ITOA = %s\n", itoa);
 	ft_putendl(str2);
 	printf("ATOI = %d\n", ft_atoi("473274"));
 	//cmp = isprint('0');
+	printf("convert base = %s\n", ft_convert_base("-11", "01", "0123"));
 	free(test);
 	free(itoa);
-	free(dest);
+	free(dest);*/
+	//ft_putstr(ft_itoa(0));
+	//ft_putstr(itoa = ft_imtoa_base(d, "0123456789"));
+	//ft_putchar('\n');
+	//ft_print_bits(1);
+	//printf("imtoa = %d", d);
+	//free (itoa);
 }
