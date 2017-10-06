@@ -31,7 +31,7 @@ void ft_memtest(void)
 	free(dest);
 	free(mem);
 	ft_strdel(&test);
-	printf("AFTERDEL TEST = %d\n", test);
+	printf("AFTERDEL TEST = %p\n", test);
 }
 
 int main()
@@ -51,7 +51,7 @@ int main()
 	//ft_putnbr(ft_atoim("-1234"));
 	//dest = ft_strndup(str2, 9);
 	//printf("STRNDUP = %s\n", dest);
-	/*ft_memtest();
+	ft_memtest();
 	test = ft_strsplit(str, ' ');
 	printf("SPLIT TEST = %s\n", test[0]);
 	itoa = ft_itoa(-23);
@@ -62,7 +62,7 @@ int main()
 	printf("convert base = %s\n", ft_convert_base("-11", "01", "0123"));
 	free(test);
 	free(itoa);
-	free(dest);*/
+	free(dest);
 	//ft_putstr(ft_itoa(0));
 	//ft_putstr(itoa = ft_imtoa_base(d, "0123456789"));
 	//ft_putchar('\n');

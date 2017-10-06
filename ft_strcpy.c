@@ -7,5 +7,6 @@ char *ft_strcpy(char *dest, const char *src)
 	cp = dest;
 	while (*cp++ = *src++)
 		;
+	*cp = '\0';
 	return (dest);
 }

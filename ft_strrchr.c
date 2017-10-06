@@ -6,11 +6,12 @@ char *ft_strrchr(const char *s, int c)
 	char *occu;
 
 	occu = NULL;
-	if (s == NULL)
-		return (NULL);
 	tmp = (char *)s;
-	while (*tmp++)
-		if (*tmp == c)
+	while (*tmp)
+	{
+		if (*tmp == ((unsigned char)c)
 			occu = tmp;
+		tmp++;
+	}
 	return (occu);
 }
