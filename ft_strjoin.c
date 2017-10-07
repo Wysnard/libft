@@ -7,7 +7,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	int	len;
 
 	len = ft_strlen(s1) + ft_strlen(s2);
-	str = (char *)malloc(sizeof(*str) * (len + 1));
+	str = ft_strnew(len);
 	if (str == NULL)
 		return (NULL);
 	ft_strcpy(str, s1);

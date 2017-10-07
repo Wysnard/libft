@@ -6,7 +6,7 @@ char *ft_strtrim(char const *s)
 	int i;
 
 	i = 0;
-	if(dest = ft_memalloc(sizeof(char) * ft_strlen(s)))
+	if(dest = ft_strnew(ft_strlen(s)))
 	{
 		while(s[i] == ' ' || s[i] == '\n' || s[i] == '\t')
 			i++;
@@ -17,7 +17,9 @@ char *ft_strtrim(char const *s)
 		i--;
 		while (dest[i] == '\t' || dest[i] == '\n' || dest[i] == ' ')
 			i--;
-		dest[i + 1] = '\0';
+		ft_bzero(&dest[i + 1], ft_strlen(&dest[i + 1]));
 	}
+	else
+		return (NULL);
 	return (dest);
 }

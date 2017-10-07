@@ -2,8 +2,10 @@
 
 char * ft_strnstr(const char	*meule_de_foin, const char *aiguille, size_t len)
 {
-	int i;
-	int j;
+	int	i;
+	int	j;
+	int	save;
+	int	savelen;
 
 	j = 0;
 	if (aiguille == NULL || *aiguille == '\0')
@@ -13,14 +15,13 @@ char * ft_strnstr(const char	*meule_de_foin, const char *aiguille, size_t len)
 		i = 0;
 		if (meule_de_foin[j] == aiguille[i])
 		{
-			while (meule_de_foin[j] == aiguille[i] && len)
-			{
-				j++;
-				i++;
-				len--;
+			save = j;
+			savelen = len;
+			while (meule_de_foin[j++] == aiguille[i++] && len--)
 				if (aiguille[i] == '\0')
 					return ((char *)&meule_de_foin[j - i]);
-			}
+			j = save + 1;
+			len = savelen - 1;
 		}
 		else
 		{

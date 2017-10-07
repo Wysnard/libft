@@ -6,8 +6,16 @@ char *ft_strmap(const char *s, char (*f)(char))
 	int i;
 
 	i = 0;
-	if (map = (char*)ft_memalloc(sizeof(s) * ft_strlen(s)))
-		while (map[i] = f(s[i]))
+	if (!(map = ft_strnew(ft_strlen(s))))
+		return (NULL);
+	if (f)
+	{
+		while (s[i])
+		{
+			map[i] = f(s[i]);
 			i++;
+		}
+	}
+	map[i] = '\0';
 	return (map);
 }

@@ -2,23 +2,15 @@
 
 char *ft_strncpy(char *dest, const char *src, size_t len)
 {
-	char *cp;
+	int	i;
 
-	cp = dest;
-	if (len == 0)
-		return (NULL);
-	while (*cp++ = *src++)
+	i = 0;
+	while (src[i] && i < len)
 	{
-		len--;
-		if (len <= 0)
-			break ;
+		dest[i] = src[i];
+		i++;
 	}
-	*cp = '\0';
-	while (len > 0)
-	{
-		*cp = '\0';
-		cp++;
-		len--;
-	}
+	while (i < len)
+		dest[i++] = '\0';
 	return (dest);
 }

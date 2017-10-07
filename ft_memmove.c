@@ -2,9 +2,12 @@
 
 void *ft_memmove(void *dest, const void *src, size_t n)
 {
-	unsigned char tmp[n];
+	char	*tmp;
 
-	ft_memcpy(tmp, src, n)
+	if (!(tmp = (char *)ft_memalloc(sizeof(*tmp) * n)))
+		return (NULL);
+	ft_memcpy(tmp, src, n);
 	ft_memcpy(dest, tmp, n);
+	free(tmp);
 	return (dest);
 }

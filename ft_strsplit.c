@@ -6,7 +6,7 @@ static char *ft_strtrim_modified(char const *s, char c)
 	int i;
 
 	i = 0;
-	if(dest = ft_memalloc(sizeof(char) * ft_strlen(s)))
+	if(dest = ft_strnew(ft_strlen(s)))
 	{
 		while(s[i] == c)
 			i++;
@@ -57,7 +57,7 @@ static void	ft_attribution(char **dest, char *trimed, char c)
 	t = 0;
 	j = 0;
 	i = 0;
-	dest[j] = ft_memalloc(sizeof(char) * ft_wordlen(trimed, c));
+	dest[j] = ft_strnew(ft_wordlen(trimed, c));
 	while (trimed[t])
 	{
 		if (trimed[t] != c)
@@ -69,7 +69,7 @@ static void	ft_attribution(char **dest, char *trimed, char c)
 				dest[j][i] = '\0';
 				i = 0;
 				j++;
-				dest[j] = ft_memalloc(sizeof(char) * ft_wordlen(&trimed[t], c));
+				dest[j] = ft_strnew(ft_wordlen(&trimed[t], c));
 			}
 		}
 		t++;
