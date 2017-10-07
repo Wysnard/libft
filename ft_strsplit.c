@@ -6,19 +6,17 @@ static char *ft_strtrim_modified(char const *s, char c)
 	int i;
 
 	i = 0;
-	if(dest = ft_strnew(ft_strlen(s)))
-	{
-		while(s[i] == c)
-			i++;
-		ft_strcpy(dest, &s[i]);
-		i = 0;
-		while (dest[i])
-			i++;
+	while (s[i] == c)
+		i++;
+	if (!(dest = ft_strdup(&s[i])))
+		return (NULL);
+	i = 0;
+	while (dest[i])
+		i++;
+	i--;
+	while (dest[i] == c)
 		i--;
-		while (dest[i] == c)
-			i--;
-		dest[i + 1] = '\0';
-	}
+	ft_bzero(&dest[i + 1], ft_strlen(&dest[i + 1]));
 	return (dest);
 }
 
@@ -48,7 +46,7 @@ static int	ft_wordlen(char const *trimed, char c)
 	return (i);
 }
 
-static void	ft_attribution(char **dest, char *trimed, char c)
+static int	ft_attribution(char **dest, char *trimed, char c)
 {
 	int	i;
 	int	j;
@@ -57,24 +55,25 @@ static void	ft_attribution(char **dest, char *trimed, char c)
 	t = 0;
 	j = 0;
 	i = 0;
-	dest[j] = ft_strnew(ft_wordlen(trimed, c));
+	if (!(dest[j] = ft_strnew(ft_wordlen(trimed, c))))
+		return (0);
 	while (trimed[t])
 	{
 		if (trimed[t] != c)
 		{
-			dest[j][i] = trimed[t];
-			i++;
+			dest[j][i++] = trimed[t];
 			if (trimed[t + 1] == c || trimed[t + 1] == '\0')
 			{
-				dest[j][i] = '\0';
+				dest[j++][i] = '\0';
 				i = 0;
-				j++;
-				dest[j] = ft_strnew(ft_wordlen(&trimed[t], c));
+				if (!(dest[j] = ft_strnew(ft_wordlen(&trimed[t], c))))
+					return (0);
 			}
 		}
 		t++;
 	}
 	dest[j][0] = '\0';
+	return (1);
 }
 
 char **ft_strsplit(char const *s, char c)
@@ -82,10 +81,12 @@ char **ft_strsplit(char const *s, char c)
 	char **dest;
 	char *trimed;
 
-	trimed = ft_strtrim_modified(s, c);
+	if (!(trimed = ft_strtrim_modified(s, c)))
+		return (NULL);
 	if (dest = (char**)ft_memalloc(sizeof(*dest) * (ft_nb_words(trimed, c) + 1)))
 	{
-		ft_attribution(dest, trimed, c);
+		if (!(ft_attribution(dest, trimed, c)))
+			return (NULL);
 	}
 	free (trimed);
 	return (dest);
