@@ -36,7 +36,7 @@ void ft_memtest(void)
 
 int main()
 {
-	char str[] = "Salut";
+	char str[] = "   lol     polo ' 345 gui   ";
 	char str2[20] = "les gens";
 	char *dest;
 	char **test;
@@ -46,23 +46,28 @@ int main()
 	intmax_t	d = 0;
 	wchar_t w[3] = {'l', 'o', '0'};
 
-	i = 1;
-	printf("STRCAT = %s\n", ft_strcat(str, str2));
+	i = 0;
+	dest = NULL;
+	//printf("STRCAT = %s\n", ft_strcat(str, str2));
 	//ft_putnbr(ft_atoim("-1234"));
 	//dest = ft_strndup(str2, 9);
 	//printf("STRNDUP = %s\n", dest);
-	ft_memtest();
-	test = ft_strsplit(str, ' ');
-	printf("SPLIT TEST = %s\n", test[0]);
-	itoa = ft_itoa(-23);
-	printf("ITOA = %s\n", itoa);
-	ft_putendl(str2);
-	printf("ATOI = %d\n", ft_atoi("473274"));
+	//ft_memtest();
+	test = ft_strsplit(NULL, ' ');
+	//while (test[i][0])
+	{
+		//printf("SPLIT TEST = %s\n", test[i]);
+		i++;
+	}
+	//itoa = ft_itoa(-23);
+	//printf("ITOA = %s\n", itoa);
+	//ft_putendl(str2);
+	//printf("ATOI = %d\n", ft_atoi("473274"));
 	//cmp = isprint('0');
-	printf("convert base = %s\n", ft_convert_base("-11", "01", "0123"));
+	//printf("convert base = %s\n", ft_convert_base("-11", "01", "0123"));
 	free(test);
-	free(itoa);
-	free(dest);
+	//free(itoa);
+	//free(dest);
 	//ft_putstr(ft_itoa(0));
 	//ft_putstr(itoa = ft_imtoa_base(d, "0123456789"));
 	//ft_putchar('\n');

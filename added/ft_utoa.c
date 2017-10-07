@@ -25,7 +25,7 @@ char	*ft_utoa(unsigned int nbr, char const *base_chr)
 	size_t			base;
 
 	base = ft_strlen(base_chr);
-	if ((buf = ft_strnew(ft_count(nbr, base))) == NULL)
+	if (!(buf = ft_strnew(ft_count(nbr, base))))
 		return (NULL);
 	i = 0;
 	if (nbr == 0)
