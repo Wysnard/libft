@@ -1,11 +1,11 @@
 #include "../libft.h"
 
-void	*ft_depiler(Pile *pile)
+void	*ft_piledel(Pile *pile)
 {
 	t_list	*list;
 	void	*cont;
 
-	const = NULL;
+	cont = NULL;
 	if (pile == NULL)
 		exit (EXIT_FAILURE);
 	if (pile->first != NULL)

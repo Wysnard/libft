@@ -86,6 +86,12 @@ t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 void	ft_lstpushadd(t_list **alst, t_list *new);
 void	ft_lstrev(t_list **list);
 int	ft_lstrotate(t_list **alst);
+int	ft_lstreverserotate(t_list **alst);
+
+void ft_pileadd(Pile *pile, void *info, size_t content_size);
+void	*ft_piledel(Pile *pile);
+void	ft_pileinit(void);
+void	ft_pilepushadd(Pile *pile, void *info);
 
 int	ft_printf(const char *arg1, ...);
 

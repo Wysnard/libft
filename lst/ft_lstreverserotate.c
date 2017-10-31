@@ -11,13 +11,13 @@ int	ft_lstreverserotate(t_list **alst)
 		return (0);
 	if (!tmp->next->next)
 	{
-		ft_swap(tmp, tmp->next);
+		ft_swap(&tmp->content, &tmp->next->content);
 		return (1);
 	}
 	while (tmp->next->next)
 		tmp = tmp->next;
 	first = tmp->next;
-	first->next = *alist;
+	first->next = *alst;
 	tmp->next = NULL;
 
 	return (1);

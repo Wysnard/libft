@@ -10,7 +10,7 @@ int	ft_lstrotate(t_list **alst)
 		return (0);
 	if (!tmp->next->next)
 	{
-		ft_swap(tmp, tmp->next);
+		ft_swap(&tmp->content, &tmp->next->content);
 		return (1);
 	}
 	first = tmp->next;
@@ -19,6 +19,6 @@ int	ft_lstrotate(t_list **alst)
 	tmp->next = *alst;
 	(*alst)->next = NULL;
 	*alst = first;
-	
+
 	return (1);
 }
