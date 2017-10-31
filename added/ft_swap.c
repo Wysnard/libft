@@ -1,4 +1,4 @@
-#include "libft.h"
+#include "../libft.h"
 
 void	ft_swap(void **s1, void **s2)
 {
