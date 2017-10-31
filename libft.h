@@ -13,6 +13,12 @@ typedef struct	s_list
 	struct s_list	*next;
 }		t_list;
 
+typedef	struct	Pile
+{
+	t_list	*first;
+	void	*info;
+}								Pile;
+
 void	ft_putchar(char c);
 void	ft_putstr(char const *s);
 size_t	ft_strlen(const char *s);
@@ -79,6 +85,7 @@ void	ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 void	ft_lstpushadd(t_list **alst, t_list *new);
 void	ft_lstrev(t_list **list);
+int	ft_lstrotate(t_list **alst);
 
 int	ft_printf(const char *arg1, ...);
 
