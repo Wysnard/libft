@@ -90,7 +90,7 @@ int	ft_lstreverserotate(t_list **alst);
 
 void ft_pileadd(Pile *pile, void *info, size_t content_size);
 void	*ft_piledel(Pile *pile);
-Pile	*ft_pileinit(void)
+Pile	*ft_pileinit(void);
 void	ft_pilepushadd(Pile *pile, void *info, size_t content_size);
 
 int	ft_printf(const char *arg1, ...);
