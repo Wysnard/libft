@@ -1,6 +1,6 @@
 #include "../libft.h"
 
-void	ft_pilepushadd(Pile *pile, void *info)
+void	ft_pilepushadd(Pile *pile, void *info, size_t content_size)
 {
 	t_list	*new;
 	t_list	*tmp;
