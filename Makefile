@@ -1,16 +1,13 @@
-NAME = libft.a
+NAME = libft
 
-SRC = *.c ./added/*.c ./ft_printf/*.c ./lst/*.c
+SRC = *.c ./added/*.c ./ft_printf/*.c ./lst/*.c ./pile/*.c
 
 OBJ = *.o
 
 all: $(NAME)
 
 $(NAME):
-	gcc -c $(SRC) && ar rc $(NAME) $(OBJ) && ranlib libft.a
-
-do:
-	gcc $(SRC) ./main/main.c -L. -lft
+	gcc -c $(SRC) && ar rc libft.a $(OBJ) && ranlib libft.a
 
 clean:
 	/bin/rm -f *.o
