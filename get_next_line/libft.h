@@ -96,8 +96,6 @@ void	ft_pilepushadd(Pile *pile, void *info, size_t content_size);
 
 int	ft_printf(const char *arg1, ...);
 
-int	get_next_line(const int fd, char **line);
-
 char	*ft_strndup(const char *s, size_t n);
 int	ft_power(int nb, int power);
 char	*ft_convert_base(char *nbr, char *base_from, char *base_to);
