@@ -7,8 +7,8 @@ void	ft_lstfrontbacksplit(t_list *src, t_list **a, t_list **b)
 
 	if (src == NULL || src->next == NULL)
 	{
-		a = src;
-		b = NULL;
+		*a = src;
+		*b = NULL;
 		return ;
 	}
 	slow = src;
@@ -21,8 +21,8 @@ void	ft_lstfrontbacksplit(t_list *src, t_list **a, t_list **b)
 			slow = slow->next;
 			fast = fast->next;
 		}
-		a = src;
-		b = slow->next;
+		*a = src;
+		*b = slow->next;
 		slow->next = NULL;
 	}
 }
