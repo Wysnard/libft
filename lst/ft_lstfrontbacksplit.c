@@ -1,19 +1,21 @@
 #include "../libft.h"
 
-void	ft_lstfrontbacksplit(t_list *src, t_list **a, t_list **b)
+void ft_lstfrontbacksplit(t_list* source, t_list** frontRef, t_list** backRef)
 {
-	t_list	*slow;
-	t_list	*fast;
-
-	if (src == NULL || src->next == NULL)
+	t_list* fast;
+	t_list* slow;
+	if (source==NULL || source->next==NULL)
 	{
-		*a = src;
-		*b = NULL;
+		/* length < 2 cases */
+		*frontRef = source;
+		*backRef = NULL;
 	}
 	else
 	{
-		slow = src;
-		fast = src;
+		slow = source;
+		fast = source->next;
+
+		/* Advance 'fast' two nodes, and advance 'slow' one node */
 		while (fast != NULL)
 		{
 			fast = fast->next;
@@ -22,9 +24,12 @@ void	ft_lstfrontbacksplit(t_list *src, t_list **a, t_list **b)
 				slow = slow->next;
 				fast = fast->next;
 			}
-			*a = src;
-			*b = slow->next;
-			slow->next = NULL;
 		}
+
+		/* 'slow' is before the midpoint in the list, so split it in two
+			at that point. */
+		*frontRef = source;
+		*backRef = slow->next;
+		slow->next = NULL;
 	}
 }
