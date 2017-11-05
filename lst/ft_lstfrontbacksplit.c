@@ -9,20 +9,22 @@ void	ft_lstfrontbacksplit(t_list *src, t_list **a, t_list **b)
 	{
 		*a = src;
 		*b = NULL;
-		return ;
 	}
-	slow = src;
-	fast = src;
-	while (fast)
+	else
 	{
-		fast = fast->next;
-		if (fast)
+		slow = src;
+		fast = src;
+		while (fast != NULL)
 		{
-			slow = slow->next;
 			fast = fast->next;
+			if (fast != NULL)
+			{
+				slow = slow->next;
+				fast = fast->next;
+			}
+			*a = src;
+			*b = slow->next;
+			slow->next = NULL;
 		}
-		*a = src;
-		*b = slow->next;
-		slow->next = NULL;
 	}
 }
