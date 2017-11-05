@@ -43,7 +43,7 @@ int	ft_print_wstr(va_list *ap, t_file *file)
 	str = va_arg(*ap, wchar_t *);
 	len = (file->precision > -1) ? ft_precwstrlen(str, file->precision, 0) : ft_wstrlen(str);
 	file->count += ft_get_attribute(file->dial, len, ' ');
-	file->count += (file->minus == -1) ? ft_get_attribute(file->zero, len, '0') : 0;
+	file->count += (file->minus == -1) ? ft_get_attribute(file->zero, len, ' ') : 0;
 	ft_putnwstr(str, len);
 	file->count += ft_get_attribute(file->minus, len, ' ') + len;
 	return (1);
@@ -61,7 +61,7 @@ int	ft_print_str(va_list *ap, t_file *file)
 		str = va_arg(*ap, const char *);
 		cp = (file->precision < ft_strlen(str) && file->precision > -1) ? ft_strndup(str, file->precision) : ft_strdup(str);
 		file->count += ft_get_attribute(file->dial, ft_strlen(cp), ' ');
-		//file->count += (file->minus == -1) ? ft_get_attribute(file->zero, ft_strlen(cp), '0') : 0;
+		file->count += (file->minus == -1) ? ft_get_attribute(file->zero, ft_strlen(cp), ' ') : 0;
 		ft_putstr(cp);
 		file->count += ft_get_attribute(file->minus, ft_strlen(cp), ' ');
 		file->count = file->count + ft_strlen(cp);

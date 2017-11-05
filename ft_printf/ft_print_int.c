@@ -37,7 +37,8 @@ int	ft_print_int(va_list *ap, t_file *file)
 		file->count += ft_get_attribute(file->zero, ft_strlen(str), '0');
 		file->count += (file->plus && nb > 0) ? 1 : 0;
 	}
-	//file->count += ft_get_attribute(file->dial, ft_strlen(str), ' ');
+	file->count += ft_get_attribute(file->precision, ft_strlen(str), '0');
+	file->count += ft_get_attribute(file->dial, ft_strlen(str), ' ');
 	ft_putstr(str);
 	file->count += ft_strlen(str) + ft_get_attribute(file->minus, ft_strlen(str), ' ');
 	free(str);

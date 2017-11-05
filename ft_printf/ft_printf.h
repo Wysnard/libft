@@ -27,6 +27,8 @@ typedef	struct	s_file
 	}	modif;
 }								t_file;
 
+void	initialisation(t_file *file);
+
 int	ft_printf(const char *arg1, ...);
 int	ft_get_precision(char *start, t_file *file);
 int ft_get_attribute(int file, int len, char c);
@@ -45,10 +47,19 @@ int	ft_print_S(va_list *ap, t_file *file);
 int	ft_print_C(va_list *ap, t_file *file);
 int	ft_print_long(va_list *ap, t_file *file);
 
+void	ft_regex(va_list *ap, t_file *file, char start);
+
 int	ft_minus(char **start, t_file *file);
 int	ft_plus(char **start, t_file *file);
 int	ft_get_modif(char **start, t_file *file);
 void	ft_putnwstr(const wchar_t *str, size_t len);
 int	ft_is_init(t_file *file);
+
+void	ft_optdial1(char **start, t_file *file);
+void	ft_optdial2(char **start, t_file *file);
+void	ft_optzero(char **start, t_file *file);
+void	ft_optdot(char **start, t_file *file);
+
+void	ft_process(va_list *ap, t_file *file, char **start);
 
 #endif
