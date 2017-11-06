@@ -24,7 +24,7 @@ char	*ft_strnstr(const char *meule_de_foin, const char *aiguille, size_t len)
 	{
 		l = (ft_strlen(aiguille) < len) ? ft_strlen(aiguille) : len;
 		if (ft_strnequ(&meule_de_foin[j], aiguille, len))
-			return (ft_strdup((char *)&meule_de_foin[j]));
+			return ((char *)&meule_de_foin[j]);
 		j++;
 		len--;
 	}
