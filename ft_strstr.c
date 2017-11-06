@@ -14,21 +14,19 @@
 
 char	*ft_strstr(const char *meule_de_foin, const char *aiguille)
 {
-	int		i;
+	int		len;
 	int		j;
 	int		save;
 
 	j = 0;
 	if (aiguille == NULL || *aiguille == '\0')
 		return ((char *)meule_de_foin);
+	len = ft_strlen(aiguille);
 	while (meule_de_foin[j])
 	{
-		if (ft_strnequ(&meule_de_foin[j] == aiguille))
+		if (ft_strnequ((char *)&meule_de_foin[j], aiguille, len))
 			return ((char *)&meule_de_foin[j]);
 		j++;
-		}
-		else
-			j++;
 	}
 	return (NULL);
 }
