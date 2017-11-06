@@ -37,10 +37,7 @@ char	*ft_itoa(int n)
 	if (!(str = ft_strnew(ct)))
 		return (NULL);
 	if (n == -2147483648)
-	{
-		ft_strncpy(str, "-2", 2);
-		n = 147483648;
-	}
+		return (ft_strdup(-2147483648));
 	else if (n < 0)
 	{
 		str[0] = '-';
