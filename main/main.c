@@ -53,7 +53,7 @@ int main()
 	//dest = ft_strndup(str2, 9);
 	//printf("STRNDUP = %s\n", dest);
 	//ft_memtest();
-	test = ft_strstr("Bonjour les gens", "n");
+	if (test = ft_strnstr("Bonjour les gens", "e", 5))
 	printf("%s\n", test);
 	//while (test[i][0])
 	//{

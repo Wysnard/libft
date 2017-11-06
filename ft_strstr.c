@@ -16,7 +16,6 @@ char	*ft_strstr(const char *meule_de_foin, const char *aiguille)
 {
 	int		len;
 	int		j;
-	int		save;
 
 	j = 0;
 	if (aiguille == NULL || *aiguille == '\0')
