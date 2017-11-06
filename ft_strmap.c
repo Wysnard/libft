@@ -1,9 +1,21 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strmap.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: vlay <marvin@42.fr>                        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/11/06 19:56:32 by vlay              #+#    #+#             */
+/*   Updated: 2017/11/06 19:56:42 by vlay             ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-char *ft_strmap(const char *s, char (*f)(char))
+char	*ft_strmap(const char *s, char (*f)(char))
 {
-	char *map;
-	int i;
+	char	*map;
+	int		i;
 
 	i = 0;
 	if (!(map = ft_strnew(ft_strlen(s))))
