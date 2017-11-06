@@ -56,17 +56,17 @@ int main()
 	test = ft_strstr("Bonjour les gens", "les");
 	ft_printf("%s\n", test);
 	//while (test[i][0])
-	{
+	//{
 		//printf("SPLIT TEST = %s\n", test[i]);
-		i++;
-	}
+		//i++;
+	//}
 	//itoa = ft_itoa(-23);
 	//printf("ITOA = %s\n", itoa);
 	//ft_putendl(str2);
 	//printf("ATOI = %d\n", ft_atoi("473274"));
 	//cmp = isprint('0');
 	//printf("convert base = %s\n", ft_convert_base("-11", "01", "0123"));
-	free(test);
+	//free(test);
 	//free(itoa);
 	//free(dest);
 	//ft_putstr(ft_itoa(0));
