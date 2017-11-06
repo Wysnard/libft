@@ -39,7 +39,7 @@ int main()
 	char str[] = "   lol     polo ' 345 gui   ";
 	char str2[20] = "les gens";
 	char *dest;
-	char **test;
+	char *test;
 	char *itoa;
 	int cmp;
 	int i;
