@@ -1,8 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: vlay <marvin@42.fr>                        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/11/06 19:18:09 by vlay              #+#    #+#             */
+/*   Updated: 2017/11/06 19:22:51 by vlay             ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-static int	ft_ct(int n)
+static	int	ft_ct(int n)
 {
-	int ct;
+	int	ct;
 
 	ct = 0;
 	while (n)
@@ -13,11 +25,11 @@ static int	ft_ct(int n)
 	return (ct);
 }
 
-char *ft_itoa(int n)
+char	*ft_itoa(int n)
 {
-	char *str;
-	int i;
-	int ct;
+	char	*str;
+	int		i;
+	int		ct;
 
 	if (!(ct = (n < 0) ? ft_ct(n) + 1 : ft_ct(n)))
 		return (ft_strdup("0"));
