@@ -54,7 +54,7 @@ int main()
 	//printf("STRNDUP = %s\n", dest);
 	//ft_memtest();
 	//if (test = ft_strnstr("Bonjour les gens", "e", 5))
-		ft_putstr("lol les gens");
+		ft_putstr("lol les gens\n");
 	//while (test[i][0])
 	//{
 		//printf("SPLIT TEST = %s\n", test[i]);
