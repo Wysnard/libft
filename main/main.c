@@ -53,8 +53,8 @@ int main()
 	//dest = ft_strndup(str2, 9);
 	//printf("STRNDUP = %s\n", dest);
 	//ft_memtest();
-	if (test = ft_strnstr("Bonjour les gens", "e", 5))
-		printf("%s\n", test);
+	//if (test = ft_strnstr("Bonjour les gens", "e", 5))
+		ft_putstr("lol les gens");
 	//while (test[i][0])
 	//{
 		//printf("SPLIT TEST = %s\n", test[i]);
