@@ -1,6 +1,6 @@
 #include "../libft.h"
 
-void	*ft_piledel(Pile *pile)
+void	*ft_piledel(t_Pile *pile)
 {
 	t_list	*list;
 	void	*cont;
