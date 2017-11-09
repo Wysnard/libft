@@ -3,7 +3,7 @@
 void	ft_btreeinsert(t_btree **root, void *item, int (*cmpf)(void *, void *))
 {
 	if (*root == NULL)
-		*root = ft_btreecreate(item) ;
+		*root = ft_btreecreate(item);
 	if ((*cmpf)((*root)->item, item) >= 0 && (*root)->left != NULL)
 		ft_btreeinsert(&(*root)->left, item, cmpf);
 	if ((*cmpf)((*root)->item, item) < 0 && (*root)->right != NULL)
