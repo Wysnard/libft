@@ -8,7 +8,7 @@ t_btree	*ft_btreecreate(void *item)
 	tmp = malloc(sizeof(*tmp));
 	if (tmp)
 	{
-		tmp->item = item;
+		tmp->content = item;
 		tmp->left = NULL;
 		tmp->right = NULL;
 	}

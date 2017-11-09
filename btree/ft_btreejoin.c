@@ -6,7 +6,7 @@ t_btree	*ft_btreejoin(t_btree *gauche, t_btree *droite, void *item)
 
 	if (!(tr = malloc(sizeof(*tr))))
 		return (NULL);
-	tr->item = item;
+	tr->content = item;
 	tr->left = gauche;
 	tr->right = droite;
 	return (tr);
