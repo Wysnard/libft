@@ -104,7 +104,7 @@ t_Pile	*ft_pileinit(void);
 void	ft_pilepushadd(t_Pile *pile, void *info, size_t content_size);
 
 t_btree	*ft_btreecreate(void *item);
-void	ft_btreedel(t_btree *tr)
+void	ft_btreedel(t_btree *tr);
 t_btree	*ft_btreejoin(t_btree *gauche, t_btree *droite, void *item);
 void	ft_btree_apply_prefix(t_btree *root, void (*applyf)(void *));
 void	ft_btree_apply_infix(t_btree *root, void(*applyf)(void *));
