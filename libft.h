@@ -19,6 +19,14 @@ typedef	struct	s_Pile
 	void	*info;
 }								t_Pile;
 
+typedef	struct	s_btree
+{
+	struct	s_btree	*right;
+	struct	s_btree	*left;
+	void	*content;
+	size_t	content_size;
+}								t_btree;
+
 void	ft_putchar(char c);
 void	ft_putstr(char const *s);
 size_t	ft_strlen(const char *s);
@@ -95,9 +103,18 @@ void	*ft_piledel(t_Pile *pile);
 t_Pile	*ft_pileinit(void);
 void	ft_pilepushadd(t_Pile *pile, void *info, size_t content_size);
 
+t_btree	*ft_btreecreate(void *item);
+void	ft_btreedel(t_btree *tr)
+t_btree	*ft_btreejoin(t_btree *gauche, t_btree *droite, void *item);
+void	ft_btree_apply_prefix(t_btree *root, void (*applyf)(void *));
+void	ft_btree_apply_infix(t_btree *root, void(*applyf)(void *));
+void	ft_btree_apply_suffix(t_btree *root, void(*applyf)(void *));
+void	ft_btreeinsert(t_btree **root, void *item, int (*cmpf)(void *, void *));
+int	ft_btreelvlct(t_btree *root);
+
 int	ft_printf(const char *arg1, ...);
 
-int	get_next_line(const int fd, char **line);
+int		get_next_line(const int fd, char **line);
 
 char	*ft_strndup(const char *s, size_t n);
 int	ft_power(int nb, int power);
