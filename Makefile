@@ -7,7 +7,7 @@ OBJ = *.o
 all: $(NAME)
 
 $(NAME):
-	gcc -c $(SRC) && ar rc $(NAME) $(OBJ) && ranlib &(NAME)
+	gcc -c $(SRC) && ar rc $(NAME) $(OBJ) && ranlib $(NAME)
 
 clean:
 	/bin/rm -f *.o
