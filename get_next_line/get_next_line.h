@@ -6,7 +6,7 @@
 /*   By: vlay <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/10 16:29:27 by vlay              #+#    #+#             */
-/*   Updated: 2017/11/10 16:34:50 by vlay             ###   ########.fr       */
+/*   Updated: 2017/11/10 16:53:44 by vlay             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 # include <sys/types.h>
 # include <sys/stat.h>
 # include <fcntl.h>
-# include "libft.h"
+# include "../libft.h"
 typedef	struct	get
 {
 	char	*save;
