@@ -6,7 +6,7 @@
 /*   By: vlay <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/06 20:02:15 by vlay              #+#    #+#             */
-/*   Updated: 2017/11/06 20:02:24 by vlay             ###   ########.fr       */
+/*   Updated: 2017/11/10 15:42:37 by vlay             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ char	*ft_strsub(char const *s, unsigned int start, size_t len)
 {
 	char	*dest;
 
-	if (!s || start == 0 && len == 0)
+	if (!s || (start == 0 && len == 0))
 		return (NULL);
 	if (!(dest = ft_strnew(len)))
 		return (NULL);
