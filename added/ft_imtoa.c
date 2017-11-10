@@ -1,6 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_imtoa.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: vlay <marvin@42.fr>                        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/11/10 16:03:05 by vlay              #+#    #+#             */
+/*   Updated: 2017/11/10 16:04:23 by vlay             ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../libft.h"
 
-static int	ft_ct(intmax_t n, size_t base)
+static	int	ft_ct(intmax_t n, size_t base)
 {
 	int ct;
 
@@ -13,12 +25,12 @@ static int	ft_ct(intmax_t n, size_t base)
 	return (ct);
 }
 
-char	*ft_imtoa_base(intmax_t nbr, char *base_to)
+char		*ft_imtoa_base(intmax_t nbr, char *base_to)
 {
 	char	*str;
-	int	i;
-	int	len;
-	int	ct;
+	int		i;
+	int		len;
+	int		ct;
 
 	if (nbr == 0)
 		return (ft_strndup(base_to, 1));

@@ -6,7 +6,7 @@
 /*   By: vlay <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/06 19:51:10 by vlay              #+#    #+#             */
-/*   Updated: 2017/11/10 15:44:04 by vlay             ###   ########.fr       */
+/*   Updated: 2017/11/10 15:47:24 by vlay             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	*ft_strcpy(char *dest, const char *src)
 	char	*cp;
 
 	cp = dest;
-	while (*cp = *src)
+	while ((*cp = *src))
 	{
 		cp++;
 		src++;

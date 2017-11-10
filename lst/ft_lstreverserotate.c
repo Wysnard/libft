@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lstreverserotate.c                              :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: vlay <marvin@42.fr>                        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/11/10 16:17:35 by vlay              #+#    #+#             */
+/*   Updated: 2017/11/10 16:17:49 by vlay             ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../libft.h"
 
 int	ft_lstreverserotate(t_list **alst)
@@ -17,6 +29,5 @@ int	ft_lstreverserotate(t_list **alst)
 	tmp->next->next = *alst;
 	*alst = tmp->next;
 	tmp->next = NULL;
-
 	return (1);
 }

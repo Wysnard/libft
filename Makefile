@@ -1,6 +1,6 @@
 NAME = libft.a
 
-SRC = *.c ./added/*.c ./ft_printf/*.c ./lst/*.c ./pile/*.c ./get_next_line/*.c ./btree/*.c
+SRC = *.c ./added/*.c ./lst/*.c ./pile/*.c ./get_next_line/*.c ./btree/*.c
 
 OBJ = *.o
 

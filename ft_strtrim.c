@@ -6,7 +6,7 @@
 /*   By: vlay <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/06 20:02:40 by vlay              #+#    #+#             */
-/*   Updated: 2017/11/06 20:02:57 by vlay             ###   ########.fr       */
+/*   Updated: 2017/11/10 15:47:46 by vlay             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strtrim(char const *s)
 	int		i;
 
 	i = 0;
-	if (dest = ft_strnew(ft_strlen(s)))
+	if ((dest = ft_strnew(ft_strlen(s))))
 	{
 		while (s[i] == ' ' || s[i] == '\n' || s[i] == '\t')
 			i++;

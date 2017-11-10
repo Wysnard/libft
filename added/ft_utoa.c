@@ -1,6 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_utoa.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: vlay <marvin@42.fr>                        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/11/10 16:08:59 by vlay              #+#    #+#             */
+/*   Updated: 2017/11/10 16:09:24 by vlay             ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../libft.h"
 
-static int	ft_count(unsigned int nbr, size_t base)
+static	int	ft_count(unsigned int nbr, size_t base)
 {
 	int i;
 
@@ -18,7 +30,7 @@ static int	ft_count(unsigned int nbr, size_t base)
 	}
 }
 
-char	*ft_utoa(unsigned int nbr, char const *base_chr)
+char		*ft_utoa(unsigned int nbr, char const *base_chr)
 {
 	char			*buf;
 	int				i;

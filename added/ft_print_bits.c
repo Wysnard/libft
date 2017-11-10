@@ -1,8 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_print_bits.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: vlay <marvin@42.fr>                        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/11/10 16:05:05 by vlay              #+#    #+#             */
+/*   Updated: 2017/11/10 16:05:23 by vlay             ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../libft.h"
 
 void	ft_print_bits(unsigned char octet)
 {
-	int	i;
+	int		i;
 	char	bits[8];
 
 	i = 0;
@@ -11,7 +23,7 @@ void	ft_print_bits(unsigned char octet)
 		bits[i] = ((octet >> i) & 1) ? '1' : '0';
 		i++;
 	}
-	bits[8] = '\0';
+	bits[7] = '\0';
 	ft_strrev(bits);
 	ft_putstr(bits);
 }
