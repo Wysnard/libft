@@ -6,7 +6,7 @@
 /*   By: vlay <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/06 19:11:31 by vlay              #+#    #+#             */
-/*   Updated: 2017/11/06 19:16:22 by vlay             ###   ########.fr       */
+/*   Updated: 2017/11/10 19:05:52 by vlay             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,12 @@
 
 int	ft_atoi(const char *nptr)
 {
-	int nb;
-	int sign;
+	long	int	nb;
+	int			sign;
 
 	nb = 0;
 	sign = 1;
-	while (*nptr == ' ' || *nptr == '\n' || *nptr == '\t'
-		|| *nptr == '\r' || *nptr == '\v' || *nptr == '\f' || *nptr < 32)
+	while (!ft_isprint(*nptr) || *nptr == ' ')
 		nptr++;
 	if (*nptr == '-')
 		sign = -1;

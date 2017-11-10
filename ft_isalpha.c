@@ -6,7 +6,7 @@
 /*   By: vlay <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/06 19:12:59 by vlay              #+#    #+#             */
-/*   Updated: 2017/11/06 19:13:03 by vlay             ###   ########.fr       */
+/*   Updated: 2017/11/10 19:10:59 by vlay             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,5 @@
 
 int	ft_isalpha(int c)
 {
-	if (c >= 'A' && c <= 'Z')
-		return (1);
-	else if (c >= 'a' && c <= 'z')
-		return (2);
-	return (0);
+	return (ft_islower(c) || ft_isupper(c));
 }

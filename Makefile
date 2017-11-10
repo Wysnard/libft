@@ -1,6 +1,6 @@
 NAME = libft.a
 
-SRC = *.c ./added/*.c ./lst/*.c ./pile/*.c ./get_next_line/*.c ./btree/*.c
+SRC = *.c ./added/*.c ./lst/*.c ./pile/*.c ./btree/*.c
 
 OBJ = *.o
 
@@ -13,6 +13,6 @@ clean:
 	/bin/rm -f *.o
 
 fclean:
-	/bin/rm -f $(NAME)
+	/bin/rm -f $(NAME) *.o
 
 re:	fclean all

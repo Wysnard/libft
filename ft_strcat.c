@@ -16,12 +16,7 @@ char	*ft_strcat(char *dest, const char *src)
 {
 	while (*dest)
 		dest++;
-	while (*src)
-	{
-		*dest = *src;
-		dest++;
-		src++;
-	}
-	*dest = '\0';
+	ft_strcpy(dest, src);
+	dest[ft_strlen(dest) + 1] = '\0';
 	return (dest);
 }

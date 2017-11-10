@@ -12,7 +12,7 @@
 
 #include "../libft.h"
 
-void	*ft_piledel(t_Pile *pile)
+void	*ft_piledel(t_pile *pile)
 {
 	t_list	*list;
 	void	*cont;

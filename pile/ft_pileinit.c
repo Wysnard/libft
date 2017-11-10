@@ -12,9 +12,9 @@
 
 #include "../libft.h"
 
-t_Pile	*ft_pileinit(void)
+t_pile	*ft_pileinit(void)
 {
-	t_Pile *pile;
+	t_pile *pile;
 
 	pile = malloc(sizeof(*pile));
 	pile->first = NULL;

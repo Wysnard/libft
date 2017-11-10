@@ -12,7 +12,7 @@
 
 #include "../libft.h"
 
-void	ft_pilepushadd(t_Pile *pile, void *info, size_t content_size)
+void	ft_pilepushadd(t_pile *pile, void *info, size_t content_size)
 {
 	t_list	*new;
 	t_list	*tmp;

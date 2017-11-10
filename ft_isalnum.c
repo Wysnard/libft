@@ -6,7 +6,7 @@
 /*   By: vlay <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/06 19:12:36 by vlay              #+#    #+#             */
-/*   Updated: 2017/11/06 19:12:39 by vlay             ###   ########.fr       */
+/*   Updated: 2017/11/10 18:20:15 by vlay             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,7 @@
 
 int	ft_isalnum(int c)
 {
-	if ((char)c >= 'A' && (char)c <= 'Z')
+	if (ft_isdigit(c) || ft_isalpha(c))
 		return (1);
-	else if ((char)c >= 'a' && (char)c <= 'z')
-		return (2);
-	else if ((char)c >= '0' && (char)c <= '9')
-		return (4);
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: vlay <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/06 19:43:02 by vlay              #+#    #+#             */
-/*   Updated: 2017/11/06 19:43:09 by vlay             ###   ########.fr       */
+/*   Updated: 2017/11/10 18:38:20 by vlay             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,9 @@
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	char	*tmp;
+	char	tmp[n];
 
-	if (!(tmp = (char *)ft_memalloc(sizeof(*tmp) * n)))
-		return (NULL);
 	ft_memcpy(tmp, src, n);
 	ft_memcpy(dest, tmp, n);
-	free(tmp);
 	return (dest);
 }

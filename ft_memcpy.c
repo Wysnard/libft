@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: vlay <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/06 19:39:41 by vlay              #+#    #+#             */
-/*   Updated: 2017/11/06 19:42:11 by vlay             ###   ########.fr       */
+/*   Created: 2017/11/10 17:22:15 by vlay              #+#    #+#             */
+/*   Updated: 2017/11/10 18:23:21 by vlay             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t len)
 		return (dest);
 	s = (char *)src;
 	d = (char *)dest;
-	while (len--)
+	while (len-- && *s)
 		*d++ = *s++;
 	*d = *s;
 	return (dest);

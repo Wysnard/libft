@@ -6,7 +6,7 @@
 /*   By: vlay <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/06 19:18:09 by vlay              #+#    #+#             */
-/*   Updated: 2017/11/06 19:22:51 by vlay             ###   ########.fr       */
+/*   Updated: 2017/11/10 17:23:31 by vlay             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ static	int	ft_ct(int n)
 	return (ct);
 }
 
-char	*ft_itoa(int n)
+char		*ft_itoa(int n)
 {
 	char	*str;
 	int		i;

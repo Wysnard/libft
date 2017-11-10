@@ -14,12 +14,10 @@
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
-	int	i;
+	unsigned int	i;
 
-	if (s == NULL || *s == '\0')
-		return ;
 	i = 0;
-	while (s[i])
+	while (s && s[i] && f)
 	{
 		f(i, &s[i]);
 		i++;
