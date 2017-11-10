@@ -4,7 +4,7 @@ void	ft_btree_apply_prefix(t_btree *root, void (*applyf)(void *))
 {
 	if (root == NULL)
 		return ;
-	(*applyf)(root->item);
+	(*applyf)(root->content);
 	if (root->left != NULL)
 		ft_btree_apply_prefix(root->left, applyf);
 	if (root->right != NULL)

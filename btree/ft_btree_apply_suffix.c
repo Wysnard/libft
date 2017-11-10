@@ -8,5 +8,5 @@ void	ft_btree_apply_suffix(t_btree *root, void(*applyf)(void *))
 		ft_btree_apply_suffix(root->left, applyf);
 	if (root->right != NULL)
 		ft_btree_apply_suffix(root->right, applyf);
-	(*applyf)(root->item);
+	(*applyf)(root->content);
 }
