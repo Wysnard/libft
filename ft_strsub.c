@@ -15,12 +15,15 @@
 char	*ft_strsub(char const *s, unsigned int start, size_t len)
 {
 	char	*dest;
+	int		i;
 
-	if (!s || (start == 0 && len == 0))
+	i = 0;
+	if (!s)
 		return (NULL);
 	if (!(dest = ft_strnew(len)))
 		return (NULL);
-	ft_strncpy(dest, &s[start], len);
-	dest[len] = '\0';
+	while (s[start] != '\0' && len--)
+		dest[i++] = s[start++];
+	dest[i] = '\0';
 	return (dest);
 }

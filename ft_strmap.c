@@ -15,12 +15,12 @@
 char	*ft_strmap(const char *s, char (*f)(char))
 {
 	char	*map;
-	int		i;
+	size_t	i;
 
 	i = 0;
-	if (!(map = ft_strnew(ft_strlen(s))))
+	if (!s || *s == '\0' || !f || !(map = ft_strnew(ft_strlen(s))))
 		return (NULL);
-	while (s && s[i] && f)
+	while (s[i])
 	{
 		map[i] = f(s[i]);
 		i++;

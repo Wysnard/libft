@@ -14,9 +14,12 @@
 
 char	*ft_strcat(char *dest, const char *src)
 {
-	while (*dest)
-		dest++;
-	ft_strcpy(dest, src);
-	dest[ft_strlen(dest) + 1] = '\0';
+	size_t	i;
+
+	i = 0;
+	while (dest[i])
+		i++;
+	while ((dest[i++] = *src++))
+		;
 	return (dest);
 }

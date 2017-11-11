@@ -14,19 +14,26 @@
 
 char	*ft_strnstr(const char *meule_de_foin, const char *aiguille, size_t len)
 {
-	int	j;
-	int	l;
+	size_t	j;
+	size_t	i;
+	size_t	tmp;
 
 	j = 0;
-	if (aiguille == NULL || *aiguille == '\0')
+	if (!aiguille || !aiguille[j])
 		return ((char *)meule_de_foin);
-	while (meule_de_foin[j] && len)
+	while (meule_de_foin && meule_de_foin[j])
 	{
-		l = (ft_strlen(aiguille) < len) ? ft_strlen(aiguille) : len;
-		if (ft_strnequ(&meule_de_foin[j], aiguille, l))
-			return ((char *)&meule_de_foin[j]);
+		i = 0;
+		tmp = j;
+		while (meule_de_foin[j] == aiguille[i] && j < len)
+		{
+			j++;
+			i++;
+			if (!aiguille[i])
+				return ((char *)&meule_de_foin[tmp]);
+		}
+		j = tmp;
 		j++;
-		len--;
 	}
 	return (NULL);
 }
