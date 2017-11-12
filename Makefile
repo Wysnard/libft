@@ -9,7 +9,8 @@ ADDFILE = ft_atoim.c ft_convert_base.c \
 			ft_putwstr_fd.c ft_putwstr.c \
 			ft_strndup.c ft_strrev.c \
 			ft_strtrijoin.c ft_swap.c \
-			ft_utoa.c
+			ft_utoa.c ft_strchri.c \
+			ft_strcdup.c
 
 ADD =  $(addprefix $(ADDDIR),$(ADDFILE))
 
@@ -20,8 +21,7 @@ LSTFILE = ft_lstadd.c ft_lstdel.c \
 			ft_lstfrontbacksplit.c ft_lstiter.c \
 			ft_lstlen.c ft_lstmap.c \
 			ft_lstnew.c ft_lstpushadd.c \
-			ft_lstrev.c ft_lstrotate.c \
-			ft_lsttoa.c
+			ft_lstrev.c ft_lstrotate.c
 
 LST =  $(addprefix $(LSTDIR),$(LSTFILE))
 

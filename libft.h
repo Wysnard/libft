@@ -151,6 +151,7 @@ intmax_t			ft_atoim(const char *str);
 char				*ft_strtrijoin(char *s1, char *s2, char *s3);
 int					ft_intlen(int nb, int base);
 void				ft_swap(void **s1, void **s2);
-char				*ft_lsttoa(t_list *list);
+size_t			ft_strchri(char *str, int c);
+char				*ft_strcdup(char *str, int c);
 
 #endif
